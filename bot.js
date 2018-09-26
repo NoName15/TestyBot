@@ -1,6 +1,6 @@
 // Load up the discord.js library
 const Discord = require("discord.js");
-const bot = new Discord.Client({disableEveryone: true});
+
 const client = new Discord.Client();
 const config = require("./config.json");
 
@@ -46,17 +46,11 @@ client.on("message", async message => {
       const m1 = await message.channel.send("https://www.lifewire.com/thmb/kGvrz9GuH4PRZ_DqSAXsMdEcNsY=/1050x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/belikebill2a-56a563313df78cf772880ac7-5b12bc00a9d4f900380dd662.PNG");
   }
    if(command === "botinfo") {
-   
-   let bicon = bot.user.displayAvatarURL;
-    let botembed = new Discord.RichEmbed()
-    .setDescription("Bot Information's As Provided By Rep3r")
-    .setColor("#ff6600")
-    .setThumbnail(bicon)
-    .addField("Bot Name", bot.user.username)
-    .addField("Created On", bot.user.createdAt)
-    .addField("Created By", "Rep3r")
+   var botEmbed = new Discord.RichEmbed()
+   .setColor('#7FFFD4')
+   .setDescription('Informations')
+   .addFeild("Creaator = Rep3r")
 
-    message.channel.send(botembed);
   }
   if(command === "ping") {
     // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
