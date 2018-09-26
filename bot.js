@@ -52,8 +52,13 @@ client.on("message", async message => {
     const m = await message.channel.send("Ping?");
     m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
   }
-  if(command === "image") {
-            const embed = new Discord.RichEmbed()
+     client.on("message", message => {
+    const prefix = "+"
+              
+          if(!message.channel.guild) return;
+   if(message.author.bot) return;
+      if(message.content === prefix + "image"){ 
+          const embed = new Discord.RichEmbed()
   
       .setTitle(`This is  ** ${message.guild.name} **  Photo !`)
   .setAuthor(message.author.username, message.guild.iconrURL)
@@ -63,7 +68,8 @@ client.on("message", async message => {
                     .setTimestamp()
 
    message.channel.send({embed});
-      }};
+      }
+  });
   if(command === "say") {
     // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
     // To get the "message" itself we join the `args` back into a string with spaces: 
