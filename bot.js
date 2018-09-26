@@ -22,8 +22,20 @@ client.on("guildDelete", guild => {
   console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
   client.user.setActivity(`Serving ${client.guilds.size} servers`);
 });
-
-
+client.on('message', msg => {
+	// Embedded
+	if(msg.content.startsWith('+ecat')) {
+		try {
+			get('https://aws.random.cat/meow').then(res => {
+				const embed = new Discord.RichEmbed()
+				.setImage(res.body.file)
+				return msg.channel.send({embed});
+			});
+		} catch(err) {
+			return msg.channel.send(error.stack);
+		}
+	}
+;
 client.on("message", async message => {
  
   if(message.author.bot) return;
