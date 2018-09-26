@@ -54,7 +54,20 @@ client.on("message", async message => {
     if(command === "mememe") {
     // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
     // The second ping is an average latency between the bot and the websocket server (one-way, not round-trip)
-    const m1 = await message.channel.send("https://www.lifewire.com/thmb/kGvrz9GuH4PRZ_DqSAXsMdEcNsY=/1050x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/belikebill2a-56a563313df78cf772880ac7-5b12bc00a9d4f900380dd662.PNG");
+      const m1 = await message.channel.send("https://www.lifewire.com/thmb/kGvrz9GuH4PRZ_DqSAXsMdEcNsY=/1050x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/belikebill2a-56a563313df78cf772880ac7-5b12bc00a9d4f900380dd662.PNG");
+  }
+   if(command === "botinfo") {
+   
+   let bicon = bot.user.displayAvatarURL;
+    let botembed = new Discord.RichEmbed()
+    .setDescription("Bot Information's As Provided By Rep3r")
+    .setColor("#ff6600")
+    .setThumbnail(bicon)
+    .addField("Bot Name", bot.user.username)
+    .addField("Created On", bot.user.createdAt)
+    .addField("Created By", "Rep3r")
+
+    message.channel.send(botembed);
   }
   if(command === "ping") {
     // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
