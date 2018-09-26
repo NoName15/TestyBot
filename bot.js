@@ -54,7 +54,7 @@ client.on("message", async message => {
     if(command === "mememe") {
     // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
     // The second ping is an average latency between the bot and the websocket server (one-way, not round-trip)
-    const m1 = await message.channel.send("https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.lifewire.com%2Fthmb%2F6QT0VfhWYxXbjIjE4Ux1GdZaRYY%3D%2F768x0%2Ffilters%3Ano_upscale()%3Amax_bytes(150000)%3Astrip_icc()%2Fggg-580734603df78cbc28f46d37-5b0310b8ff1b780020a6a599.PNG&imgrefurl=https%3A%2F%2Fwww.lifewire.com%2Finternet-memes-that-have-won-our-hearts-3573553&docid=UPONYQlaRNGRGM&tbnid=rPoeZNzNQUQuFM%3A&vet=10ahUKEwjt98vXotndAhVHXRoKHS7VCi4QMwg1KAEwAQ..i&w=768&h=530&client=opera&bih=627&biw=1366&q=memes&ved=0ahUKEwjt98vXotndAhVHXRoKHS7VCi4QMwg1KAEwAQ&iact=mrc&uact=8");
+    const m1 = await message.channel.send("https://www.lifewire.com/thmb/kGvrz9GuH4PRZ_DqSAXsMdEcNsY=/1050x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/belikebill2a-56a563313df78cf772880ac7-5b12bc00a9d4f900380dd662.PNG");
   }
   if(command === "ping") {
     // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
