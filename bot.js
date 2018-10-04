@@ -22,7 +22,33 @@ client.on("guildDelete", guild => {
   console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
   client.user.setActivity(`Serving ${client.guilds.size} servers`);
 });
+client.on("message", message => {
+    var prefix = "##";
+ if (message.content === "##help-gn-ar") {
+     message.channel.send('**تم ارسال رسالة في الخاص** :mailbox_with_mail: ');
+  const embed = new Discord.RichEmbed()
+      .setColor("RANDOM")
+      .setDescription(`
+             
+===================== اوامر عامة =====================
 
++ping ➾ سرعة اتصالك بالانترنت
++dzdev99 ➾ يعطيك رابط سبوتيفاي صانع البوت
++kick ➾ معلومات عن السيرفر
++ban ➾ عمل حظر لشخص
++purge ➾ حذف الرسائل
++ytchannel ➾ قناة يوتيوب صانع البوت
++say ➾ يكرر كلامك
+
+=========================================================
+وقريباً المزيد من الاكواد
+=========================================================
+Support server :https://discord.gg/cUgYbEr
+`)
+   message.author.sendEmbed(embed)
+   
+   }
+   });
 client.on("message", async message => {
  
   if(message.author.bot) return;
@@ -39,10 +65,10 @@ client.on("message", async message => {
   const command = args.shift().toLowerCase();
   
   // Let's go with a few common example commands! Feel free to delete or change those.
-    if(command === "mememe") {
+    if(command === "dzdev99") {
     // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
     // The second ping is an average latency between the bot and the websocket server (one-way, not round-trip)
-      const m1 = await message.channel.send("https://www.lifewire.com/thmb/kGvrz9GuH4PRZ_DqSAXsMdEcNsY=/1050x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/belikebill2a-56a563313df78cf772880ac7-5b12bc00a9d4f900380dd662.PNG");
+      const m1 = await message.channel.send("https://open.spotify.com/user/7l38m8x7a9s6bu3wyteuf0m44");
   }
 
   if(command === "ping") {
