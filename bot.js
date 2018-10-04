@@ -30,16 +30,12 @@ client.on("message", message => {
       .setColor("RANDOM")
       .setDescription(`
              ̲**B̲o̲t  ̲B̲y  ̲$̲D̲z̲D̲e̲v̲9̲9̲#̲9̲0̲7̲8̲**
-===================== اوامر عامة =====================
-
 +ping ➾ سرعة اتصالك بالانترنت
 +dzdev99 ➾ يعطيك رابط سبوتيفاي صانع البوت
 +kick ➾ معلومات عن السيرفر
 +ban ➾ عمل حظر لشخص
 +purge ➾ حذف الرسائل
-+ytchannel ➾ قناة يوتيوب صانع البوت
 +say ➾ يكرر كلامك
-
 =========================================================
 وقريباً المزيد من الاكواد
 =========================================================
@@ -66,9 +62,14 @@ client.on("message", async message => {
   
   // Let's go with a few common example commands! Feel free to delete or change those.
     if(command === "dzdev99") {
-    // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
-    // The second ping is an average latency between the bot and the websocket server (one-way, not round-trip)
-      const m1 = await message.channel.send("https://open.spotify.com/user/7l38m8x7a9s6bu3wyteuf0m44");
+      message.channel.send('**تم الارسال في الخاص**  :white_check_mark:  ');
+  const embed2 = new Discord.RichEmbed()
+      .setColor("RANDOM")
+      .addFeild("Youtube : ")
+  .addFeild("Spotify : ")
+  .addFeild("Facebook : ")
+`)
+message.author.sendEmbed(embed2)
   }
 
   if(command === "ping") {
