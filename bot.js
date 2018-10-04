@@ -1,6 +1,6 @@
 // Load up the discord.js library
 const Discord = require('discord.js');
-const { Client, Attachment } = require('discord.js');
+
 
 const client = new Discord.Client();
 const config = require("./config.json");
@@ -74,6 +74,7 @@ message.channel.send({embed});
 }
 
 });
+  
 client.on("message", message => {
     var prefix = "+";
  if (message.content === "+help") {
@@ -102,15 +103,7 @@ Support server :https://discord.gg/cUgYbEr
     msg.channel.send("وعليكـم الســلام ورحمة الله وبركاتـه")
   }
 });
-client.on('message', message => {
-    // If the message is '!rip'
-    if (message.content === '+rip') {
-        // Create the attachment using Attachment
-        const attachment = new Attachment('https://i.imgur.com/w3duR07.png');
-        // Send the attachment in the message channel
-        message.channel.send(attachment);
-    }
-});
+
 
 client.on("message", async message => {
  
