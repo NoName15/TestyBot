@@ -45,6 +45,34 @@ Support server :https://discord.gg/cUgYbEr
    
    }
    });
+client.on('message', message => {
+    // If the message is '!rip'
+    if (message.content === '+rip') {
+        // Create the attachment using Attachment
+        const attachment = new Attachment('https://i.imgur.com/w3duR07.png');
+        // Send the attachment in the message channel
+        message.channel.send(attachment);
+    }
+});
+  if (message.content === '+about') {
+    // We can create embeds using the MessageEmbed constructor
+    // Read more about all that you can do with the constructor
+    // over at https://discord.js.org/#/docs/main/stable/class/RichEmbed
+    const embed = new RichEmbed()
+      // Set the title of the field
+      .setTitle('وسائل التواصل الاجتماعي لصاحب البوت')
+      // Set the color of the embed
+      .setColor(0xFF0000)
+      // Set the main content of the embed
+      .setDescription('
+      **Youtube** :
+      **Spotify** :               
+      **Facebook** :               
+       ');
+    // Send the embed to the same channel as the message
+    message.channel.send(embed);
+  }
+});
 client.on("message", async message => {
  
   if(message.author.bot) return;
@@ -61,14 +89,6 @@ client.on("message", async message => {
   const command = args.shift().toLowerCase();
   
   // Let's go with a few common example commands! Feel free to delete or change those.
- if(command === "about") {
- const embed1 = new Discord.RichEmbed()
- .setTitle(' وسائل التواصل الاجتماعي الخاصة بمطور البوت')
- .addField('Youtube : ')
- .addField('Spotify : ')
- .addFeild('Facebook : ')
- message.author.sendEmbed(embed1)
- }
 
 
   if(command === "ping") {
