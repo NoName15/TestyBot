@@ -22,7 +22,8 @@ client.on("guildDelete", guild => {
   console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
   client.user.setActivity(`Serving ${client.guilds.size} servers`);
 });
-  client.on('message', message => {
+  
+client.on('message', message => {
   var prefix = "+"
 var args = message.content.split(" ").slice(1);    
 if(message.content.startsWith(prefix + 'id')) {
@@ -174,7 +175,6 @@ client.on('message', message => {
     }
  
     });
-
 client.on("message", async message => {
  
   if(message.author.bot) return;
@@ -187,6 +187,8 @@ client.on("message", async message => {
   // e.g. if we have the message "+say Is this the real life?" , we'll get the following:
   // command = say
   // args = ["Is", "this", "the", "real", "life?"]
+  
+  
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   
