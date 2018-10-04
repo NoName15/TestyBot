@@ -54,8 +54,8 @@ client.on('ready', () => {
 
 });
 client.on("ready", () => {
-    client.user.setActivity({game: {name: "?help | ?helpadmin | Bot By : $DzDev99", type: 0}});
-})
+    client.user.setGame("?help | ?helpadmin | Bot By : $DzDev99");
+});
 client.on('message', msg => {
   if (msg.content === 'السلام عليكم') {      
     msg.channel.send("وعليكـم الســلام ورحمة الله وبركاتـه")
