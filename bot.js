@@ -61,16 +61,15 @@ client.on("message", async message => {
   const command = args.shift().toLowerCase();
   
   // Let's go with a few common example commands! Feel free to delete or change those.
-    if(command === "dzdev99") {
-      message.channel.send('**تم الارسال في الخاص**  :white_check_mark:  ');
-  const embed2 = new Discord.RichEmbed()
-      .setColor("RANDOM")
-      .addFeild("Youtube : ")
-  .addFeild("Spotify : ")
-  .addFeild("Facebook : ")
-`)
-message.author.sendEmbed(embed2)
-  }
+ if(command === "about") {
+ const embed1 = new Dicord.RichEmbed()
+ .setTitle(' وسائل التواصل الاجتماعي الخاصة بمطور البوت')
+ .addField('Youtube : ')
+ .addField('Spotify : ')
+ .addFeild('Facebook : ')
+ message.author.send(embed1)
+ }
+
 
   if(command === "ping") {
     // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
