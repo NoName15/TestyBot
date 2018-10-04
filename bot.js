@@ -29,7 +29,7 @@ client.on("message", message => {
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
       .setDescription(`
-             
+             ̲**B̲o̲t  ̲B̲y  ̲$̲D̲z̲D̲e̲v̲9̲9̲#̲9̲0̲7̲8̲**
 ===================== اوامر عامة =====================
 
 +ping ➾ سرعة اتصالك بالانترنت
