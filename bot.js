@@ -65,9 +65,9 @@ client.on('message', message => {
       .setColor(0xFF0000)
       // Set the main content of the embed
       .setDescription('
-      **Youtube** :
-      **Spotify** :               
-      **Facebook** :               
+      '**Youtube** :'
+      '**Spotify** : '              
+      '**Facebook** : '              
        ');
     // Send the embed to the same channel as the message
     message.channel.send(embed);
