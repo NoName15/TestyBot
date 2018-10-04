@@ -74,7 +74,7 @@ message.channel.send({embed});
 
 }
 
-});
+})
   
 client.on("message", message => {
     var prefix = "+";
@@ -98,7 +98,7 @@ Support server :https://discord.gg/cUgYbEr
    message.author.sendEmbed(embed)
    
    }
-   });
+   })
 client.on('message', message => {
  
               if(!message.channel.guild) return;
@@ -174,7 +174,7 @@ client.on('message', message => {
  
     }
  
-    });
+    })
 client.on("message", async message => {
  
   if(message.author.bot) return;
