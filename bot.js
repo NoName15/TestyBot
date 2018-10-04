@@ -46,14 +46,16 @@ client.on("message", message => {
 
 client.on('ready', () => {
    console.log(`----------------`);
-      console.log(`Desert Bot- Script By : Diamond Codes`);
+      console.log(`Desert Bot- Script By : $DzDev99`);
         console.log(`----------------`);
       console.log(`ON ${client.guilds.size} Servers '     Script By : Diamond Codes ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
 
 });
-
+client.on("ready", () => {
+    client.user.setActivity({game: {name: "?help | ?helpadmin | Bot By : $DzDev99", type: 0}});
+})
 client.on('message', msg => {
   if (msg.content === 'السلام عليكم') {      
     msg.channel.send("وعليكـم الســلام ورحمة الله وبركاتـه")
