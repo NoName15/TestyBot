@@ -23,8 +23,8 @@ client.on("guildDelete", guild => {
   client.user.setActivity(`Serving ${client.guilds.size} servers`);
 });
 client.on("message", message => {
-    var prefix = "##";
- if (message.content === "##help-gn-ar") {
+    var prefix = "+";
+ if (message.content === "+help") {
      message.channel.send('**تم ارسال رسالة في الخاص** :mailbox_with_mail: ');
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
