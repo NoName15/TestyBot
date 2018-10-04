@@ -145,7 +145,7 @@ client.on('message', message => {
 client.on('message', message => {
     if (message.content === "?helpadmin") {
         let pages = [`**[❖═════اومر ادمن═══════❖]
-        ❖ ?kick <mention > ➾  kickلي اعطاء شخص
+        ❖ ?kick <mention > ➾  kick لي اعطاء شخص
       
         ❖ ?setvoice  لي انشاء روم فويس اونلاين
       
@@ -227,7 +227,7 @@ client.on('message', message => {
             if(!message.channel.guild) return;
         let embed = new Discord.RichEmbed()
         .setTitle(`:small_orange_diamond: Click Here To Invite | أضغط لدعوة البوت :small_orange_diamond: `)
-        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=491650508231016448&permissions=8&scope=bot`)
+        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=497146851506520064&permissions=8&scope=bot`)
      message.channel.sendEmbed(embed);
        }
    });
@@ -280,7 +280,8 @@ if (message.content.startsWith(prefix + 'help')) { //ALPHACODES
 ***__وصف عن البوت__***
 **
 :gem:  البوت فيه كثير ميزات حلوة و جميلة
- ا:rocket: البوت يعمل قرابة 24 ساعة
+البوت من قبل $DzDev99 :ok_hand: 
+ا:rocket: البوت يعمل  24 ساعة
 **
         ***__General orders__***
 **
@@ -352,7 +353,7 @@ client.on('message', message => {
 });
 client.on('message', message => {
     if(message.content === '?support') {
-        message.channel.send('https://discord.gg/nKUfPST');
+        message.channel.send('https://discord.gg/cUgYbEr');
     }
 });
 client.on('message', message => {
