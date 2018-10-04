@@ -62,7 +62,7 @@ client.on("message", async message => {
   
   // Let's go with a few common example commands! Feel free to delete or change those.
  if(command === "about") {
- const embed1 = new Dicord.RichEmbed()
+ const embed1 = new Discord.RichEmbed()
  .setTitle(' وسائل التواصل الاجتماعي الخاصة بمطور البوت')
  .addField('Youtube : ')
  .addField('Spotify : ')
