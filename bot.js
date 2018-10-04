@@ -54,22 +54,7 @@ client.on('message', message => {
         message.channel.send(attachment);
     }
 });
-  if (message.content === '+about') {
-    // We can create embeds using the MessageEmbed constructor
-    // Read more about all that you can do with the constructor
-    // over at https://discord.js.org/#/docs/main/stable/class/RichEmbed
-    const embed = new RichEmbed()
-      // Set the title of the field
-      .setTitle('وسائل التواصل الاجتماعي لصاحب البوت')
-      // Set the color of the embed
-      .setColor(0xFF0000)
-      // Set the main content of the embed
-      .setDescription('Later....
-                      ');
-    // Send the embed to the same channel as the message
-    message.channel.send(embed);
-  }
-});
+
 client.on("message", async message => {
  
   if(message.author.bot) return;
