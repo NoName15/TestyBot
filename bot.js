@@ -31,7 +31,7 @@ client.on("message", message => {
       .setDescription(`
              ̲**B̲o̲t  ̲B̲y  ̲$̲D̲z̲D̲e̲v̲9̲9̲#̲9̲0̲7̲8̲**
 +ping ➾ سرعة اتصالك بالانترنت
-+dzdev99 ➾ يعطيك رابط سبوتيفاي صانع البوت
++about ➾ يعطيك يعطيك روابط التواصل الاجتماعي لصانع البوت
 +kick ➾ معلومات عن السيرفر
 +ban ➾ عمل حظر لشخص
 +purge ➾ حذف الرسائل
@@ -67,7 +67,7 @@ client.on("message", async message => {
  .addField('Youtube : ')
  .addField('Spotify : ')
  .addFeild('Facebook : ')
- message.author.send(embed1)
+ message.author.sendEmbed(embed1)
  }
 
 
@@ -78,10 +78,7 @@ client.on("message", async message => {
     m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
   }
     
-      if(command === "ytchannel"){ 
-message.channel.send('https://youtube.com/vsause');
-      }
- 
+
   if(command === "say") {
     // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
     // To get the "message" itself we join the `args` back into a string with spaces: 
