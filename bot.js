@@ -104,7 +104,7 @@ message.channel.send('https://youtube.com/vsause');
     if(!member)
       return message.reply("اذكر شخص موجود فالسيرفر");
     if(!member.bannable) 
-      return message.reply("لا استطيع حضر هذا الشخص، هل يملك صلاحيات اثر منك؟ هل انا غير مخول لفل هذا؟");
+      return message.reply("لا استطيع حضر هذا الشخص، هل يملك صلاحيات اثر منك؟ هل انا غير مخول لفعل هذا؟");
 
     let reason = args.slice(1).join(' ');
     if(!reason) reason = "لم يتم ذكر السبب";
