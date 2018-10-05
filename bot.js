@@ -87,7 +87,7 @@ client.on('message',message =>{
   });
 
 
-if (command === "remind") {
+if (message.content === '?remind') {
 
 
     let reminderTime = args[0];
