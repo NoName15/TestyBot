@@ -416,7 +416,7 @@ client.on('message',async message => {
   }
 });
 client.on('message', message => {
-if (message.content.startsWith(prefix + 'help')) { //ALPHACODES
+if (message.content.startsWith(prefix + 'gameshelp')) { //ALPHACODES
     let pages = [`
 ***__وصف عن البوت__***
 **
@@ -499,8 +499,9 @@ if (message.content.startsWith(prefix + 'help')) { //ALPHACODES
 『?report / لرفع شكوى على عضو 』
 『?servers / لرؤية عدد السيرفرات التي داخل بها البوت 』
 『?myid / لمعرفة الايدي الخاص بك 』
-『?helpgames / مساعدة حول الالعاب 』
+『?gameshelp / مساعدة حول الالعاب 』
 『?topinv / معرفة اكثر واحد جاب ناس 』
+『?remind / جعل البوت يذكرك بشيء 』
 **
    
 `]
