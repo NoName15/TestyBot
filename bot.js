@@ -56,6 +56,33 @@ client.on('ready', () => {
 client.on("ready", () => {
     client.user.setGame("?help | ?helpadmin | Bot By : $DzDev99");
 });
+client.on('message',message =>{
+    var prefix = "?";
+    if(message.content.startsWith(prefix + 'topinv')) {
+  message.guild.fetchInvites().then(i =>{
+  var invites = [];
+   
+  i.forEach(inv =>{
+    var [invs,i]=[{},null];
+     
+    if(inv.maxUses){
+        invs[inv.code] =+ inv.uses+"/"+inv.maxUses;
+    }else{
+        invs[inv.code] =+ inv.uses;
+    }
+        invites.push(`invite: ${inv.url} inviter: ${inv.inviter} \`${invs[inv.code]}\`;`);
+   
+  });
+  var embed = new Discord.RichEmbed()
+  .setColor("#000000")
+  .setDescription(`${invites.join(`\n`)+'\n\n**By:** '+message.author}`)
+  .setThumbnail("https://media.discordapp.net/attachments/477570106755383307/479229377037598720/22713057_151850495552450_709700562_o.jpg?width=201&height=201")
+           message.channel.send({ embed: embed });
+   
+  });
+   
+    }
+  });
 client.on('message', msg => {
   if (msg.content === 'السلام عليكم') {      
     msg.channel.send("وعليكـم الســلام ورحمة الله وبركاتـه")
@@ -238,10 +265,15 @@ client.on('message', message => {
         ❖ ?cv <name> ➾لـ انشاء روم صوتي
       
         ❖ ?bc <message>  ➾ لـ ارسال رسالة لي كل الاعضاء
+        
         ❖ ?mc  ➾ لـ اغلاق الشات
+        
         ❖ ?unmc  ➾ لـ فتح الشات
+        
         ❖ ?rolebc  ➾ برود كاست للرتب 
+        
         ❖ ?send  ➾ ارسال رسالة لروم باسم البوت
+        
         ❖ ?clear  ➾ لـ حذف الشات 
         **`]
         let page = 1;
@@ -357,6 +389,62 @@ if (message.content.startsWith(prefix + 'help')) { //ALPHACODES
     let pages = [`
 ***__وصف عن البوت__***
 **
+البوت من قبل $DzDev99 :ok_hand: 
+
+**
+        ***__Games orders__***
+**
+
+『?saraha / مساعدة حول الالعاب 』
+**
+   
+`]
+    let page = 1;
+ 
+    let embed = new Discord.RichEmbed()
+    .setColor('RANDOM')
+    .setFooter(`Page ${page} of ${pages.length}`)
+    .setDescription(pages[page-1])
+ 
+    message.author.sendEmbed(embed).then(msg => {
+ 
+        msg.react('◀').then( r => {
+            msg.react('▶')
+ 
+ 
+        const backwardsFilter = (reaction, user) => reaction.emoji.name === '◀' && user.id === message.author.id;
+        const forwardsFilter = (reaction, user) => reaction.emoji.name === '▶' && user.id === message.author.id;
+ 
+ 
+        const backwards = msg.createReactionCollector(backwardsFilter, { time: 2000000});
+        const forwards = msg.createReactionCollector(forwardsFilter, { time: 2000000});
+ 
+ 
+ 
+        backwards.on('collect', r => {
+            if (page === 1) return;
+            page--;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page ${page} of ${pages.length}`);
+            msg.edit(embed)
+        })
+        forwards.on('collect', r => {
+            if (page === pages.length) return;
+     
+      page++;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page ${page} of ${pages.length}`);
+            msg.edit(embed)
+        })
+        })
+    })
+    }
+});
+client.on('message', message => {
+if (message.content.startsWith(prefix + 'help')) { //ALPHACODES
+    let pages = [`
+***__وصف عن البوت__***
+**
 :gem:  البوت فيه كثير ميزات حلوة و جميلة
 البوت من قبل $DzDev99 :ok_hand: 
 ا:rocket: البوت يعمل  24 ساعة
@@ -380,6 +468,8 @@ if (message.content.startsWith(prefix + 'help')) { //ALPHACODES
 『?report / لرفع شكوى على عضو 』
 『?servers / لرؤية عدد السيرفرات التي داخل بها البوت 』
 『?myid / لمعرفة الايدي الخاص بك 』
+『?helpgames / مساعدة حول الالعاب 』
+『?topinv / معرفة اكثر واحد جاب ناس 』
 **
    
 `]
