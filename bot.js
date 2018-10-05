@@ -2,8 +2,9 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 var prefix = "?"
 const ms = require("ms");
-const command = args.shift().toLowerCase();
+
 const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+const command = args.shift().toLowerCase();
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
   console.log('')
