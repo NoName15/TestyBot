@@ -39,7 +39,7 @@ const reactions = ["ًں’»", "ًں–Œ", "ًںکƒ", "ًں†•"];
 
  
 //If there isn't a reaction for every role, scold the user! // AlphaCodes
-if (roles.length !== reactions.length) throw "Roles list and reactions list are not the same length!"; الرسالة الي تجي هنا
+if (roles.length !== reactions.length) throw "Roles list and reactions list are not the same length!"; 
  
 //Function to generate the role messages, based on your settings // AlphaCodes
 function generateMessages(){
