@@ -31,8 +31,8 @@ client.on('ready', () => {
 const yourID = "480407581085532180"; //Instructions on how to get this: https://redd.it/40zgse // AlphaCodes
 const setupCMD = "?createrolemessage"
 let initialMessage = `**React to the messages below to receive the associated role. If you would like to remove the role, simply remove your reaction!**`;
-const roles = ["Hacker", "Artist", "Public Relations", "Intern"]; الرتب هنا
-const reactions = ["ًں’»", "ًں–Œ", "ًںکƒ", "ًں†•"]; Reaction Here | الريأكشن هنا
+const roles = ["Hacker", "Artist", "Public Relations", "Intern"]; 
+const reactions = ["ًں’»", "ًں–Œ", "ًںکƒ", "ًں†•"]; 
 
  
 //Load up the bot... // AlphaCodes
