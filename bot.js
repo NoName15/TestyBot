@@ -32,7 +32,7 @@ const yourID = "480407581085532180"; //Instructions on how to get this: https://
 const setupCMD = "?createrolemessage"
 let initialMessage = `**React to the messages below to receive the associated role. If you would like to remove the role, simply remove your reaction!**`;
 const roles = ["Hacker", "Artist", "Public Relations", "Intern"]; 
-const reactions = ["ًں’»", "ًں–Œ", "ًںکƒ", "ًں†•"]; 
+const reactions = [":thumbsup:" , ":exclamation:" , ":ok_hand:" , ":full_moon_with_face:"]; 
 
  
 //Load up the bot... // AlphaCodes
